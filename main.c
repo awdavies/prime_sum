@@ -19,7 +19,6 @@ int main(int argc, char **argv) {
   // Creates the threads pointing to the function in question.
   int res;
   for (long i = 0; i < nthreads; ++i) {
-    // printf("Creating thread %ld. . .\n", i); 
     res = pthread_create(&thread_pool[i], NULL, prime_tester,
         (void *)i);
     if (res) {
